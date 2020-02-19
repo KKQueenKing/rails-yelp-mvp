@@ -1,0 +1,14 @@
+<div class="container">
+
+<h2>This is the Index</h2>
+<ol>
+  <% @restaurants.each do |restaurant| %>
+  <li>
+    <%= link_to restaurant.name, restaurant_path(restaurant) %>
+      <%= restaurant.address %> <%= restaurant.phone_number %> <%= restaurant.category %>
+    <% end %>
+  </li>
+</ol>
+<a href="restaurants/new" class="btn btn-secondary">Create a new Restaurant</a>
+</div>
+

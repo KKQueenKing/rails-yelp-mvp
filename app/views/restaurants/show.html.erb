@@ -1,0 +1,19 @@
+<div class='container'>
+  <h2>This is the restaurant</h2>
+  <h3><%= @restaurant.name %></h3>
+  <h4>Location: <%= @restaurant.address %></h4>
+  <h4>Cuisine: <%= @restaurant.category %></h4>
+  <h4>Reviews: <%= @review %></h4>
+  <ol>
+    <li>
+
+    </li>
+  </ol>
+  <%= link_to new_restaurant_review_path(@restaurant) do %>
+    <i class="btn btn-secondary"> Submit a Review </i>
+  <% end %>
+  <br>
+  <%= link_to restaurants_path do %>
+  <i class="fas fa-arrow-circle-left"></i> Back to list
+  <% end %>
+</div>
